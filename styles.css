@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #0f0e14; 
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.shadow-card {
+    box-shadow: 0 0px 20px rgb(90, 88, 105);
+    transition: box-shadow 0.3s ease;
+}
+
+.shadow-card:hover {
+    box-shadow: 0 0px 30px rgb(90, 88, 105);
+}

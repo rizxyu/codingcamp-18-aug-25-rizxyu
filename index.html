@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Rizky Adinursanto">
+    <meta name="description" content="Shalist Website To do list simple dibuat dengan HTML, CSS, Tailwindcss">
+    <meta name="keywords" content="Shalist, To do list, HTML, CSS, Tailwindcss">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Add poppins font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- cdn remixicon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <title>Shalist - To do list</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="container mx-auto px-4">
+
+        <!-- ini cardnya mwheheh-->
+        <div class="bg-[#211e33] rounded-lg shadow-lg p-6 mt-center shadow-card max-w-md mx-auto">
+            <!-- heading -->
+            <h1 class="text-3xl font-bold text-center p-2 text-white">To do list</h1>
+            <!-- form input to do -->
+            <form id="" class="flex flex-col md:flex-row items-center">
+                <input type="text" placeholder="Add a new task" class="border border-gray-600 rounded p-2 w-full bg-[#1b182b] text-white" required/>
+                <input type="date" class="border border-gray-600 rounded p-2 w-full mt-2 md:mt-0 md:ml-2 bg-[#1b182b] text-white" required/>
+                <button type="submit" class="bg-blue-700 text-white rounded p-2 mt-2 md:mt-0 md:ml-2 hover:bg-blue-500 transition duration-300"><i class="ri-add-line"></i></button>
+            </form>
+
+            <!-- button action section -->
+            <div class="mt-6 flex justify-between items-center">
+                <!-- filter button -->
+                <div class="relative">
+                    <button id="filter-button" class="flex items-center bg-[#1b182b] hover:bg-[#0f0d17] text-white font-bold py-2 px-4 rounded">
+                        <i class="ri-filter-line mr-2"></i> Filter
+                    </button>
+                    <div id="filter-dropdown" class="absolute hidden bg-[#1b182b] rounded-lg shadow-lg mt-2 py-2 w-48 z-10">
+                        <a href="#" class="block px-4 py-2 text-white hover:bg-[#0f0d17]">Selesai</a>
+                        <a href="#" class="block px-4 py-2 text-white hover:bg-[#0f0d17]">Belum Selesai</a>
+                    </div>
+                </div>
+                <!-- clear button -->
+                <button id="delete-all-button" class="flex items-center bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 rounded">
+                    <i class="ri-delete-bin-2-line mr-2"></i> Delete All
+                </button>
+            </div>
+
+            <table class="text-white w-full mt-6 rounded-lg overflow-hidden">
+                <thead class="bg-[#0f0d17]">
+                    <tr>
+                        <th class="px-4 py-2 text-left">Task</th>
+                        <th class="px-4 py-2 text-left">Due Date</th>
+                        <th class="px-4 py-2 text-left">Status</th>
+                        <th class="px-4 py-2 text-left">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-[#1b182b]">
+                    <tr class="border-b border-gray-700">
+                        <td class="px-4 py-2">Contoh Tugas 1</td>
+                        <td class="px-4 py-2">2025-12-31</td>
+                        <td class="px-4 py-2">Belum Selesai</td>
+                        <td class="px-4 py-2">
+                            <button class="text-green-500 hover:text-green-400"><i class="ri-check-line"></i></button>
+                            <button class="text-red-500 hover:text-red-400 ml-2"><i class="ri-delete-bin-line"></i></button>
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-700">
+                        <td class="px-4 py-2">Contoh Tugas 2</td>
+                        <td class="px-4 py-2">2025-12-31</td>
+                        <td class="px-4 py-2">Selesai</td>
+                        <td class="px-4 py-2">
+                            <button class="text-yellow-500 hover:text-yellow-400"><i class="ri-arrow-go-back-line"></i></button>
+                            <button class="text-red-500 hover:text-red-400 ml-2"><i class="ri-delete-bin-line"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
